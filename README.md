@@ -5,14 +5,12 @@ Basic example of getting prisma2 working locally + remotely on KintoHub.
 ## Requirements
 
 * Install docker 2.x
-* Run `npm init -y`
-* Run `npm install typescript ts-node prisma2 --save-dev`
-* Run `npm install @prisma/client`
 
 ## Setup Locally
 
 1) run `docker-compose up -d`
-2) run `npx ts-node index.ts`
+2) run `npm install`
+3) run `npx ts-node index.ts`
 
 # Updating your schema.sql
 
