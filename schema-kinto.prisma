@@ -1,0 +1,8 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:tea@cs-postgres:5432/hello-prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}

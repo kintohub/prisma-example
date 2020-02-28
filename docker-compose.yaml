@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: hello-prisma
+  postgres-migrations:
+    build: .
+    restart: on-failure
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: localhost
+      DB_NAME: hello-prisma
+volumes:
+  db_data:
