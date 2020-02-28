@@ -1,10 +1,10 @@
-CREATE TABLE "public"."User" (
+CREATE TABLE IF NOT EXISTS "public"."User" (
   user_id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255),
   email VARCHAR(255) UNIQUE NOT NULL
 );
 
-CREATE TABLE "public"."Post" (
+CREATE TABLE IF NOT EXISTS "public"."Post" (
   post_id SERIAL PRIMARY KEY NOT NULL,
   title VARCHAR(255) NOT NULL,
   content TEXT,
@@ -12,7 +12,7 @@ CREATE TABLE "public"."Post" (
   FOREIGN KEY (author_id) REFERENCES "public"."User"(user_id)
 );
 
-CREATE TABLE "public"."Profile" (
+CREATE TABLE IF NOT EXISTS "public"."Profile" (
   profile_id SERIAL PRIMARY KEY NOT NULL,
   bio TEXT,
   user_id INTEGER NOT NULL,

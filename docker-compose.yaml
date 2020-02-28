@@ -15,7 +15,9 @@ services:
     depends_on:
       - postgres
     environment:
-      DB_HOST: localhost
+      DB_HOST: postgres
+      DB_USER: postgres
+      PGPASSWORD: ""
       DB_NAME: hello-prisma
 volumes:
   db_data:

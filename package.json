@@ -1,0 +1,28 @@
+{
+  "name": "prisma-example",
+  "version": "1.0.0",
+  "description": "Basic example of getting prisma2 working locally + remotely on KintoHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kintohub/prisma-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kintohub/prisma-example/issues"
+  },
+  "homepage": "https://github.com/kintohub/prisma-example#readme",
+  "devDependencies": {
+    "prisma2": "^2.0.0-preview022",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.0.0-preview022"
+  }
+}
