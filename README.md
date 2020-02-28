@@ -30,6 +30,7 @@ This will reapply the schema - ensure your schema.sql file will run successfully
 3) Setup the database name (which is default empty).
 
 ### Create a migration job to apply sql schema
+
 1) Create a job kintoblock
 2) Setup environment variables in the settings in the top left (you can paste the below)
 ```
@@ -48,4 +49,9 @@ DB_HOST=cs-postgres
 3) Set the build command `npm install && npx prisma2 generate`
 4) Set the run command `npx ts-node index.ts`
 
-Once the build is successful, add it to your deployment
+Once the build is successful, setup the env variables (can paste the below)
+```
+POSTGRES_URL=postgresql://postgres:{put-in-the-pass-you-chose}@cs-postgres:5432/{put-in-the-db-name-you-chose}
+```
+
+5) Add to the deployment with your migration job + postgres
